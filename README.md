@@ -74,7 +74,7 @@ Thay đổi **db_name, db_user, db_password, db_host** lần lượt thành **wo
 
     define( 'DB_HOST', 'localhost' );
 
-Thêm `define('FS_METHOD','direct')` vào cuối file.
+Thêm `define('FS_METHOD','direct');` vào cuối file.
 
 Thoát và lưu lại.
 
