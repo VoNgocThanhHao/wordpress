@@ -8,7 +8,7 @@
 ### Cài đặt **php** (version 7.4):
 
     add-apt-repository ppa:ondrej/php
-
+>
     apt install php7.4-fpm php7.4-curl php7.4-mysql php7.4-xml
 
 Gõ `php -v` để kiểm tra
@@ -27,17 +27,17 @@ Gõ `service mysql status` để kiểm tra trạng thái:
 Tạo cơ sở dữ liệu cho wordpress:
 
     mysql -h localhost -u root -P 3306 -p
-
+>
     CREATE DATABASE wordpress; 
 
 Tạo user cho wordpress:
 
     CREATE USER wordpress@localhost IDENTIFIED BY '123456'; 
-
+>
     GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON wordpress.* TO wordpress@localhost; 
-
+>
     FLUSH PRIVILEGES; 
-
+>
     quit 
 
 ### Cài đặt **Wordpress**:
@@ -47,7 +47,7 @@ Tạo user cho wordpress:
 Tải Wordpress từ trang chủ:
 
     curl -O https://wordpress.org/latest.tar.gz
-
+>
     tar xzvf latest.tar.gz 
 
 Hoặc git clone file đã chuẩn bị:
@@ -57,7 +57,7 @@ Hoặc git clone file đã chuẩn bị:
 Sau đó di chuyển vào thư mục wordpress:
 
     cd wordpress 
-
+>
     cp wp-config-sample.php wp-config.php 
 
 Cấu hình cho wordpress:
@@ -67,11 +67,11 @@ Cấu hình cho wordpress:
 Thay đổi **db_name, db_user, db_password, db_host** lần lượt thành **wordpress, wordpress, 123456, localhost**:
 
     define( 'DB_NAME', 'wordpress' );
-
+>
     define( 'DB_USER', 'wordpress' );
-
+>
     define( 'DB_PASSWORD', '123456' );
-
+>
     define( 'DB_HOST', 'localhost' );
 
 Thêm `define('FS_METHOD','direct');` vào cuối file.
