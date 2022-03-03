@@ -84,9 +84,7 @@ Cấp quyền truy cập cho thư mục:
 
 Cấu hình **nginx** cho **wordpress**: 
 
-    cd /etc/nginx/sites-enabled/ 
->
-    nano default 
+    nano /etc/nginx/sites-enabled/default
 
 Thay đổi:
 
